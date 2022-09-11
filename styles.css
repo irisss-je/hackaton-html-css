@@ -1,0 +1,321 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+}
+
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 115px 40px 1fr 75px;
+    grid-template-areas:
+    "header"
+    "nav" 
+    "main"
+    "footer";
+}
+
+.header,
+.navbar,
+main {
+    padding: 10px;
+    color: teal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* header */
+.header{
+    grid-area: header;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: indianred;
+    text-decoration:overline;
+    text-align: center;
+    background-color: darkslategrey;
+    border-bottom: solid 7px indianred;
+}
+/* end header */
+
+/* nav */
+.navbar{
+    grid-area: nav;
+    justify-self: center;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+li{
+    float: left;
+    font-size: 0.7em;
+    font-style: oblique;
+    margin-right: 12px;
+} 
+
+li a{
+    display: block;
+    text-decoration: none;
+    color: lightcoral;
+}
+
+li a:hover{
+    color: teal;
+}
+/* end nav */
+
+
+/* main */
+
+main{
+    grid-area: main;
+}
+
+h1{
+    font-size: 1.2em;
+}
+
+h2{
+    font-size: 1em;
+}
+
+p{
+    font-size: 0.8em;
+}
+/* home */
+.flex-container{
+    display: flex;
+    flex-flow:row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    color: indianred;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.flex-container img{
+    width: 150px;
+    height: auto;
+    border: solid 3px indianred;
+}
+
+
+/* image homepage */
+
+.cate_venice img{
+    width: 100%;
+    min-width: 320px;
+    max-width: 1028px;
+    min-height: auto;
+    max-height: auto; 
+    border-top: solid 5px indianred;
+    border-bottom: solid 5px indianred;
+}
+
+.cate_venice p{
+    color: grey;
+    font-size: 0.2em;
+    font-style: italic;
+    min-width: 320px;
+    max-width: 1028px;
+}
+/* end home */
+
+/* Youtube */
+iframe{
+    width: 100%;
+}
+/* end Youtube */
+
+/* morag ross section */
+.morag a{
+    text-decoration: none;
+    color: lightcoral;
+}
+
+.morag a:hover{
+    color: teal;
+}
+
+#manifesto{
+    width: 60%;
+    min-width: 320px;
+    max-width: 1028px;
+    min-height: auto;
+    max-height: auto;
+}
+
+.onderschrift{
+    color: grey;
+    font-size: 0.2em;
+    font-style: italic;
+    margin: 0;
+}
+/* end morag ross section */
+#stewart{
+    width: 60%;
+    min-width: 320px;
+    max-width: 1028px;
+    min-height: auto;
+    max-height: auto;
+}
+
+.stewart a{
+    text-decoration: none;
+    color: lightcoral;
+    font-size: 0.8em;
+}
+
+
+.stewart a:hover{
+    color: teal;
+}
+
+/* profile pictures about us */
+.expert-container{
+    display: flex;
+    flex-flow:row nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: center;
+}
+
+.paula,
+.sandra,
+.robert{
+    margin: 10px;
+}
+
+
+.paula img,
+.sandra img,
+.robert img{
+    width: 80px;
+    padding: 3px;
+    border: 3px solid indianred;
+}
+
+
+/* end profile pictures about us */
+
+/* footer */
+
+.footer-container{
+    grid-area: footer;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: darkslategrey;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.9em;
+    color: indianred;
+    border-top: solid 7px indianred;
+
+}
+
+.copyright{
+    display: block;
+
+}
+
+footer a{
+    display: block;
+    color: indianred;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+footer a:hover{
+    color: lightcoral;
+}
+/* end footer */
+
+/* media queries */
+@media (min-width: 1028px) {
+    h1{
+        font-size: 1.5em;
+    }
+    .cate h1{
+        text-align: center;
+    }
+
+    h2{
+        font-size: 1.2em;
+    }
+    
+    p{
+        font-size: 1em;
+    }
+    
+    li{
+        font-size: 1em;
+    }
+    
+    .cate_venice img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+
+    .cate_venice p{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 0.6em;
+    }
+
+
+    iframe{
+    max-width: 854px;
+    min-height: 480px;
+    } 
+
+    .onderschrift{
+        font-size: 0.6em;
+    }
+
+
+    .paula img,
+    .sandra img,
+    .robert img{
+        width: 250px;
+    }
+
+    .flex-container img{
+        width: 500px;
+    }
+
+    .skincare-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: 10px;
+        grid-template-areas:
+        "mary morag";
+    }
+    
+    .mary{
+        grid-area: mary;
+    }
+    
+    .morag{
+        grid-area: morag;
+    }
+
+    #manifesto{
+     max-width: 854px;
+     min-width: 100%
+    }
+
+
+    .footer-container{
+        font-size: 1.1em;
+    }
+}
